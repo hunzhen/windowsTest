@@ -13,7 +13,7 @@ namespace windowsTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //label2.Text = "label2";
+            //111label2.Text = "label2";
             Controls.Add(label2);
         }
 
@@ -33,7 +33,7 @@ namespace windowsTest
         private void show()
         {
             //label2.Text = fList[0].ToString();  //int i
-            label2.Text = "ÒÑÊäÈëµÄÊý×Ö:\n";
+            label2.Text = "å·²è¾“å…¥çš„æ•°å­—:\n";
             foreach (double i in fList)
             {
                 if (i != 0)
@@ -44,12 +44,12 @@ namespace windowsTest
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBox k = sender as TextBox;
-            if (e.KeyChar == '\r')   //¼ì²â°´ÏÂµÄ¼üÊÇ²»ÊÇ»Ø³µ
+            if (e.KeyChar == '\r')   //æ£€æµ‹æŒ‰ä¸‹çš„é”®æ˜¯ä¸æ˜¯å›žè½¦
             {
-                //É¾³ýÄ©Î²»Ø³µ
+                //åˆ é™¤æœ«å°¾å›žè½¦
                 k.Text = k.Text.Replace("\r", "");
-                //×ª»»³Édouble¸³Öµ
-                try//²î´í¼ì²â
+                //è½¬æ¢æˆdoubleèµ‹å€¼
+                try//å·®é”™æ£€æµ‹
                 {
                     fList[listLong++] = double.Parse(k.Text);   //convert.ToDouble(k.Text)
                 }
@@ -57,7 +57,7 @@ namespace windowsTest
                 {
 
                 }
-                //Çå¿Õ×Ö·û´®
+                //æ¸…ç©ºå­—ç¬¦ä¸²
                 k.Text = "";
                 show();
             }
@@ -72,7 +72,7 @@ namespace windowsTest
                 if (i > max)
                     max = i;
             }
-            label1.Text = "×î´óÎª" + max.ToString();
+            label1.Text = "æœ€å¤§ä¸º" + max.ToString();
         }
 
         private void textBox1_Click(object sender, EventArgs e)
